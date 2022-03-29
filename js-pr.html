@@ -4,24 +4,33 @@
 
     </head>
     <body>
-                  
-          
-
+        
           <h1>실습</h1>
-          <input type="button" value="부가세계산기" onclick="
-              let 가격 = Number(prompt('가격'));
-              alert(가격*0.1);
-          ">
+          <input type="button" value="섭씨 화씨 변환기 " onclick="
+          converter()
+         ;
+      " >
 
-          <input type="button" value="섭씨(℃)→화씨(℉) 변환기 " onclick="
-          
-          let 섭씨 = Number(prompt('섭씨℃'));
-                   
-          alert((9/5*섭씨)+32+'℉' );
-      ">
-
-
-
-
+      
+      <script>
+          function converter(){
+         let 실행방식 = prompt('섭씨를 화씨로 바꾸신다면 C \n 화씨를 섭씨로 바꾸신다면 F를 입력해주세요')
+          if(실행방식 === 'C'){
+            섭씨 = prompt('섭씨온도(℃)=?');
+            화씨 = Number(섭씨*9/5)+32   
+            alert('화씨온도(℉)='+화씨);
+            
+          }
+          if(실행방식 === 'F'){
+            화씨 = prompt('화씨온도(℉)');
+            섭씨 = Number(화씨-32)*5/9;   
+            alert('섭씨온도(℃)='+섭씨);
+          }else{
+              alert('잘못된 접근입니다.')
+          }}
+        
+      </script>
+        
+   
     </body>
 </html>
